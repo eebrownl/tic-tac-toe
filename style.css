@@ -1,0 +1,124 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 6px;
+    background-color: #4682b4;
+    cursor: pointer;
+    position: relative; 
+}
+
+.tile {
+    background-color: gainsboro;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.strike {
+    position: absolute;
+    background-color: darkred;
+}
+
+.strike-row-1 {
+    width: 100%;
+    height: 4px;
+    top: 15%;
+}
+
+.strike-row-2 {
+    width: 100%;
+    height: 4px;
+    top: 49%;
+}
+
+.strike-row-3 {
+    width: 100%;
+    height: 4px;
+    top: 83%;
+}
+
+.strike-column-1 {
+    width: 4px;
+    height: 100%;
+    left: 15%;
+}
+
+.strike-column-2 {
+    width: 4px;
+    height: 100%;
+    left: 49%;
+}
+
+.strike-column-3 {
+    width: 4px;
+    height: 100%;
+    left: 83%;
+}
+
+.strike-diagonal-1 {
+    width:90%; 
+    height: 4px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(45deg)
+}
+
+.strike-diagonal-2 {
+    width:90%; 
+    height: 4px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(-45deg)
+}
+
+#game-over-area {
+    text-align: center;
+    border: solid goldenrod 8px;
+    padding: 50px;
+    width: 50%;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+#play-again {
+    background-color: gainsboro;
+    border: 1px solid slategray;
+    border-radius: 3px;
+    padding: 8px;
+    font-size: 1.2rem;
+}
+
+#play-again:hover {
+    background-color: slategray;
+    cursor:pointer;
+    color: whitesmoke
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.x-hover:hover::after {
+    content: "X";
+    opacity: .2;
+}
+
+.o-hover:hover::after {
+    content: "O";
+    opacity: .2;
+}
